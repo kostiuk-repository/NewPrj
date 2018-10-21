@@ -58,7 +58,7 @@ public class UserRepoFromDisc implements UserRepo {
         List<User> usersList = users.stream()
                 .filter(u -> u.getName().equals(name))
                 .collect(Collectors.toList());
-        if (usersList.size() > 0){
+        if (!usersList.isEmpty()){
             return usersList;
         } else{
             throw new IllegalArgumentException("users with name = " + name +" don\'t exist");
@@ -70,7 +70,7 @@ public class UserRepoFromDisc implements UserRepo {
         List<User> usersList = users.stream()
                 .filter(u -> u.getAge() > age)
                 .collect(Collectors.toList());
-        if (usersList.size() > 0){
+        if (!usersList.isEmpty()){
             return usersList;
         } else{
             throw new IllegalArgumentException("users with age more than = " + age +" don\'t exist");
