@@ -71,16 +71,17 @@ public class StudentUser {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
-        User user = (User) o;
-        return getId() == user.getId() &&
-                getAge() == user.getAge() &&
-                Objects.equals(getName(), user.getName()) &&
-                Objects.equals(getSurname(), user.getSurname());
+        if (!(o instanceof StudentUser)) return false;
+        StudentUser that = (StudentUser) o;
+        return getId() == that.getId() &&
+            getAge() == that.getAge() &&
+            Objects.equals(getName(), that.getName()) &&
+            Objects.equals(getSurname(), that.getSurname()) &&
+            Objects.equals(getDocType(), that.getDocType());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getSurname(), getAge());
+        return Objects.hash(getId(), getName(), getSurname(), getAge(), getDocType());
     }
 }
