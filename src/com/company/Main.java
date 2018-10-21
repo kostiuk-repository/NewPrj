@@ -34,11 +34,11 @@ public class Main {
 
         NewFileRepo fileRepo = new FileRepoFromDiscWithExtraData();
 
-        File file1 = new File(1 ,"file content 1", user1);
-        File file2 = new File(2 ,"file content 2", user1);
-        File file3 = new File(3 ,"file content 3", user3);
-        File file4 = new File(4 ,"file content 4", user3);
-        File file5 = new File(5 ,"file content 5", user2);
+        File file1 = new File(1,"file content 1",user1);
+        File file2 = new File(2,"file content 2",user1);
+        File file3 = new File(3,"file content 3",user3);
+        File file4 = new File(4,"file content 4",user3);
+        File file5 = new File(5,"file content 5",user2);
 
         fileRepo.save(file1);
         fileRepo.save(file2);

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class UserRepoFromDisc implements UserRepo {
 
-    List<User> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
     @Override
     public void update(User user) {
@@ -53,6 +53,7 @@ public class UserRepoFromDisc implements UserRepo {
         return users;
     }
 
+
     @Override
     public List<User> findUsersByName(String name) {
         List<User> usersList = users.stream()
@@ -75,5 +76,11 @@ public class UserRepoFromDisc implements UserRepo {
         } else{
             throw new IllegalArgumentException("users with age more than = " + age +" don\'t exist");
         }
+    }
+
+    private List<UserDTO> mapToDTO(User user) {
+        return users.stream()
+            .map(UserMapper::mapUser)
+            .collect(Collectors.toList());
     }
 }
