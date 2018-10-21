@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.app.api.file.FileRepo;
 import com.company.app.api.file.NewFileRepo;
 import com.company.app.api.user.UserRepo;
 import com.company.app.core.file.FileRepoFromDiscWithExtraData;
@@ -28,7 +27,7 @@ public class Main {
         System.out.println(userRepo.findUserById(1) + "\n");
         System.out.println(userRepo.findAll() + "\n");
         System.out.println(userRepo.findUsersByName("Влад") + "\n");
-        System.out.println(userRepo.findUserWithAgeMoreThan(20) + "\n");
+        System.out.println(userRepo.findUsersWithAgeMoreThan(20) + "\n");
         User updatedUser = new User(1,"Влад","Котюк",24);
         userRepo.update(updatedUser);
         System.out.println(userRepo.findUserById(1) + "\n");
