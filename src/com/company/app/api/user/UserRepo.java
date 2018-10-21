@@ -1,6 +1,5 @@
 package com.company.app.api.user;
 
-import com.company.domain.document.Document;
 import com.company.domain.user.User;
 
 import java.util.List;
@@ -17,5 +16,5 @@ public interface UserRepo {
 
     List<User> findUsersByName(String name);
 
-    List<User> findUserWithAgeMoreThan(int age);
+    List<User> findUsersWithAgeMoreThan(int age);
 }

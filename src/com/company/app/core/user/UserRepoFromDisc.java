@@ -61,19 +61,19 @@ public class UserRepoFromDisc implements UserRepo {
         if (usersList.size() > 0){
             return usersList;
         } else{
-            throw new IllegalArgumentException("user with name = " + name +" don\'t exist");
+            throw new IllegalArgumentException("users with name = " + name +" don\'t exist");
         }
     }
 
     @Override
-    public List<User> findUserWithAgeMoreThan(int age) {
+    public List<User> findUsersWithAgeMoreThan(int age) {
         List<User> usersList = users.stream()
                 .filter(u -> u.getAge() > age)
                 .collect(Collectors.toList());
         if (usersList.size() > 0){
             return usersList;
         } else{
-            throw new IllegalArgumentException("user with age more than = " + age +" don\'t exist");
+            throw new IllegalArgumentException("users with age more than = " + age +" don\'t exist");
         }
     }
 }
