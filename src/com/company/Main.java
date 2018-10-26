@@ -19,8 +19,12 @@ public class Main {
         Project project2 = new Project("some_project-2",
             LocalDate.of(2019,9,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant(),
             LocalDate.of(2020,11,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant());
+        Project project3 = new Project("some_project-3",
+            LocalDate.of(2019,9,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant(),
+            LocalDate.of(2020,11,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant());
         projectRepo.save(project1);
         projectRepo.save(project2);
-        
+        projectRepo.save(project3);
+
     }
 }
