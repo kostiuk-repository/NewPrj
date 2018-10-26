@@ -10,6 +10,7 @@ public class StudentUser {
     private int age;
 	private String docType;
 
+
     public StudentUser(int id, String name, String surname, int age) {
         this.id = id;
         this.name = name;

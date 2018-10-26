@@ -25,7 +25,7 @@ public class FileRepoFromDiscWithExtraData implements NewFileRepo {
     }
 
     @Override
-    public File findFileById(int id) {
+    public File findFileById(int id)  {
         return files.stream()
             .filter(file -> file.getId() == id)
             .findFirst().get();
