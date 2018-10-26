@@ -30,5 +30,7 @@ public class Main {
 
         System.out.println(projectRepo.findAllFinishedProjectsToDate(LocalDate.of(2019,8,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant()));
 
+        System.out.println(projectRepo.findAllFinishedProjectsToDate(LocalDate.of(2019,8,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant()));
+
     }
 }
