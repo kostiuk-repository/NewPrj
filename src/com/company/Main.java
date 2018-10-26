@@ -39,12 +39,14 @@ public class Main {
         File file3 = new File(3,"file content 3",user3);
         File file4 = new File(4,"file content 4",user3);
         File file5 = new File(5,"file content 5",user2);
+        File file6 = new File(6, "file contrnt 6", user3);
 
         fileRepo.save(file1);
         fileRepo.save(file2);
         fileRepo.save(file3);
         fileRepo.save(file4);
         fileRepo.save(file5);
+        fileRepo.save(file6);
 
         System.out.println(fileRepo.findAll() + "\n");
         System.out.println(fileRepo.findUserFiles(user1) + "\n");
