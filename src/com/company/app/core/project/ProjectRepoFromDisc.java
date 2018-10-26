@@ -11,7 +11,17 @@ import static java.util.stream.Collectors.toList;
 
 public class ProjectRepoFromDisc implements ProjectRepo {
 
-    List<Project> projectList = new ArrayList<>();
+    private List<Project> projectList = new ArrayList<>();
+
+    @Override
+    public Project findProjectByUUID(String uuid) {
+        return null;
+    }
+
+    @Override
+    public void update(Project project) {
+
+    }
 
     @Override
     public void save(Project project) {

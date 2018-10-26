@@ -16,4 +16,8 @@ public interface ProjectRepo {
     List<Project> findAllFinishedProjectsToDate(Instant date);
 
     Project findProjectByName(String name);
+
+    Project findProjectByUUID(String uuid);
+
+    void update(Project project);
 }
