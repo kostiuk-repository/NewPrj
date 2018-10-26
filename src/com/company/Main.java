@@ -21,16 +21,6 @@ public class Main {
             LocalDate.of(2020,11,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant());
         projectRepo.save(project1);
         projectRepo.save(project2);
-
-        System.out.println(projectRepo.findAll());
-
-        System.out.println(projectRepo.findProjectByName("some_project-1"));
-
-        System.out.println(projectRepo.findAllStartedProjectsWithDateMoreThan(LocalDate.of(2018,8,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant()));
-
-        System.out.println(projectRepo.findAllFinishedProjectsToDate(LocalDate.of(2019,8,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant()));
-
-        System.out.println(projectRepo.findAllFinishedProjectsToDate(LocalDate.of(2019,8,15).atStartOfDay(ZoneId.of("Europe/Paris")).toInstant()));
-
+        
     }
 }
